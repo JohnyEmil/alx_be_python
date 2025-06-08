@@ -6,7 +6,7 @@ def display_menu():
     print("4. Exit")
 
 def add_item(shopping_list):
-    item = input("Enter item to add: ").strip()
+    item = input("Enter the item to add: ").strip()  # Fixed input prompt
     if item:
         shopping_list.append(item)
         print(f"Added '{item}' to the list.")
@@ -17,14 +17,14 @@ def remove_item(shopping_list):
     item = input("Enter item to remove: ").strip()
     if item in shopping_list:
         shopping_list.remove(item)
-        print(f"remove '{item}' from the list.")
+        print(f"Removed '{item}' from the list.")  # Fixed capitalization
     else:
         print(f"'{item}' is not found in the list")
         
 def display_list(shopping_list):
     if shopping_list:
-        for i,item in enumerate(shopping_list, 1):
-            print(f"{i}.{item}")
+        for i, item in enumerate(shopping_list, 1):  # Added space after comma
+            print(f"{i}. {item}")  # Added space after dot
     else:
         print("\nShopping list is empty")        
     
