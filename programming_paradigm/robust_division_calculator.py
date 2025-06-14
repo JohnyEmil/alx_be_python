@@ -6,4 +6,4 @@ def safe_divide(numerator:float, denominator:float):
   except ValueError:
     return "Error: Please enter numeric values only."
   else:
-    return result
+    return f"the result of the division is {result}"
